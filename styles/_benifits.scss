@@ -1,0 +1,52 @@
+.benifits {
+    &__content {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        grid-gap: 20px;
+        &--left {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            &--item {
+                border: 1px solid rgb(231, 231, 231);
+                text-align: center;
+                color: $primary;
+                padding: 2rem;
+                &--title {
+                    font-size: 16px;
+                }
+            }
+        }
+        &--right {
+            &--title {
+                font-family: 'Poppins', sans-serif;
+                font-size: 16px;
+                color: $primary;
+            }
+            &--description {
+                font-family: 'Rubik', sans-serif;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 875px) {
+    .benifits {
+        &__content {
+            grid-template-columns: 1fr;
+            &--right {
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .benifits {
+        &__content {
+            &--left {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    }
+}

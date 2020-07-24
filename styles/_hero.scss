@@ -1,0 +1,61 @@
+.hero {
+    height: 600px;
+    background-image: url('/assets/images/demo-eleven-banner-2.jpg');
+    background-position: center;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__contentWrapper {
+        align-items: center;
+        height: 100%;
+    }
+    &__content {
+        width: 58.33333333%;
+        text-align: right;
+        &--title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 58px;
+            color: $primary;
+            font-weight: 800;
+            line-height: 65px;
+        }
+        &--subtitle {
+            font-size: 15px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .hero {
+        // height: 75vh;
+        padding-bottom: 5rem;
+        &__content {
+            &--title {
+                font-size: 48px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        &__content {
+            width: 100%;
+            &--title {
+                font-size: 38px;
+                line-height: 56px;
+            }
+        }
+    }
+}
+@media (max-width: 350px) {
+    .hero {
+        &__content {
+            &--title {
+                font-size: 28px;
+                line-height: 45px;
+            }
+        }
+    }
+}

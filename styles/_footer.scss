@@ -1,0 +1,106 @@
+.footer {
+    background: url(/assets/images/footer.jpg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    // padding-top: 7rem;
+    // height: 350px;
+    font-size: 15px;
+    font-family: 'Rubik', sans-serif;
+    line-height: 35px;
+    padding: 7rem 0;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+
+        &--item {
+            padding: 1rem 1rem 0 1rem;
+            &--itemList {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            &--heading {
+                font-size: 22px;
+                font-family: 'Poppins', sans-serif;
+                margin-bottom: 2rem;
+            }
+            &--link {
+                color: white;
+            }
+            &--submit {
+                background: white;
+                border-radius: 50px;
+                &--input {
+                    border: none;
+                    padding-left: 1rem;
+                    margin-left: 1rem;
+                    border-radius: 50px;
+                    &:focus {
+                        outline: 0 !important;
+                    }
+                }
+                &--btn {
+                    border: none;
+                    background: $warning;
+                    padding: 15px 40px;
+                    border-radius: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .footer {
+        &__list {
+            &--item {
+                &--itemList {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .footer {
+        &__list {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .footer {
+        &__list {
+            &--item {
+                &--submit {
+                    display: block;
+                    background: none;
+                    &--input {
+                        width: 100%;
+                        padding: 15px 25px;
+                        border: none;
+                        margin-left: 0;
+                        border-radius: 50px;
+                        &:focus {
+                            outline: 0 !important;
+                        }
+                    }
+                    &--btn {
+                        border: none;
+                        background: $warning;
+                        padding: 15px 40px;
+                        border-radius: 50px;
+                        width: 100%;
+                        margin-top: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

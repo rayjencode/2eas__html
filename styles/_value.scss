@@ -1,0 +1,64 @@
+.value {
+    background: url(/assets/images/demo-eleven-background-blue.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // height: 60vh;
+    display: flex;
+    // align-items: center;
+    margin-top: 7rem;
+    padding: 7rem 0;
+
+    &__heading {
+        font-size: 26px;
+        font-family: 'Poppins', sans-serif;
+        line-height: 35px;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__wrapper {
+        grid-gap: 30px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    &__col {
+        text-align: center;
+        &--title {
+            color: #b5c0ff;
+            font-size: 18px;
+            font-family: 'Poppins', sans-serif;
+            // padding: 0 8rem;
+        }
+        &--sub {
+            color: white;
+            font-family: 'Rubik', sans-serif;
+            font-size: 15px;
+            // padding: 0 4rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .value {
+        height: 100%;
+
+        &__wrapper {
+            grid-template-columns: 1fr;
+        }
+        &__heading {
+            font-size: 1.5rem;
+        }
+        &__col {
+            &--imgWrapper {
+                height: 70px;
+                width: 70px;
+                margin-left: auto;
+                margin-right: auto;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

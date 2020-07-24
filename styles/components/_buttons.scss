@@ -1,0 +1,18 @@
+.btn {
+    font-family: 'Rubik', sans-serif;
+    padding: 16px 45px;
+    border-radius: 50px;
+    cursor: pointer;
+    background: transparent;
+    font-weight: 500;
+    color: $primary;
+}
+
+.btn-primary-outline {
+    border: 1px solid $primary;
+}
+.btn-primary {
+    background: $primary;
+    color: white;
+    border: none;
+}

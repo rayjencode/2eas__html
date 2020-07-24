@@ -1,0 +1,99 @@
+.topNav {
+    background: $primary;
+    color: white;
+    &__needhelp {
+        font-size: 11px;
+    }
+    &__contact {
+        font-size: 14px;
+    }
+    &__followUs {
+        font-size: 13px;
+    }
+    &__social {
+        font-size: 12px;
+    }
+}
+
+.nav {
+    box-shadow: $box-shadow;
+    &__menu {
+        &__list {
+            &--item {
+                margin-left: 30px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+.nav__menu--Btn {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 992px) {
+    .nav__menu--Btn {
+        display: block;
+    }
+    .nav__menu {
+        // display: none;
+        transform: translateX(-100%);
+        position: fixed;
+        // background: rgba(77, 77, 77, 0.699);
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 3;
+        transition: 0.4s ease;
+        &__list {
+            // display: flex;
+            // flex-direction: column;
+            // align-items: flex-start;
+
+            display: block;
+            padding-top: 2rem;
+            height: 100vh;
+            background: #161616;
+            width: 250px;
+            // transition: 0.4s ease;
+            // margin-left: -250px;
+            // transform: translateX(-250px);
+
+            &--item {
+                width: 100%;
+                margin-left: 0;
+                padding: 1rem 2rem;
+                font-size: 15px;
+                &:hover {
+                    background: $primary;
+                }
+                &--link {
+                    display: block;
+                    color: white;
+                }
+
+                &:last-child {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .topNav__social {
+        display: none;
+    }
+    .topNav__help {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .topNav__help {
+        display: flex;
+        flex-direction: column;
+    }
+}

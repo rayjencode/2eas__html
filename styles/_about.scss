@@ -1,0 +1,22 @@
+.about {
+    margin-top: 7rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    &__item {
+        &--title {
+            font-size: 26px;
+            font-family: 'Poppins', sans-serif;
+            line-height: 35px;
+            color: $primary;
+        }
+        &--description {
+            font-size: 15px;
+        }
+    }
+}
+
+@media (max-width: 868px) {
+    .about {
+        grid-template-columns: 1fr;
+    }
+}

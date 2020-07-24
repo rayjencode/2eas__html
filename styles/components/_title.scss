@@ -1,0 +1,31 @@
+.section__title {
+    text-align: center;
+    margin: 0 auto 5rem auto;
+
+    &--heading {
+        font-size: 26px;
+        line-height: 35px;
+        width: 38%;
+        margin: 1.5rem auto;
+        font-weight: 800;
+        color: $primary;
+        font-family: 'Poppins', sans-serif;
+    }
+    &--subheading {
+        width: 58%;
+        margin: 1.5rem auto;
+        font-size: 15px;
+        font-family: 'Rubik', sans-serif;
+    }
+}
+
+@media (max-width: 992px) {
+    .section__title {
+        &--heading {
+            width: 80%;
+        }
+        &--subheading {
+            width: 80%;
+        }
+    }
+}

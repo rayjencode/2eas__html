@@ -1,0 +1,31 @@
+.testimony {
+    display: grid;
+    grid-template-columns: 1.5fr 4fr;
+    box-shadow: 0px 0px 50px rgba(0, 1, 1, 0.11);
+
+    background: white;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -3rem;
+
+    &__person {
+        text-align: center;
+        &--imgWrapper {
+            width: 80px;
+        }
+    }
+    &__comments {
+        font-size: 17px;
+        color: $text100;
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .testimony {
+        grid-template-columns: 1fr;
+        &__comments {
+            margin-top: 2.5rem;
+        }
+    }
+}

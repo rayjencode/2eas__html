@@ -1,0 +1,67 @@
+.blog {
+    background: url(/assets/images/demo-eleven-background-work.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 7rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        &--item {
+            border: 1px solid $border;
+            &--imgWrapper {
+                height: 120px;
+                overflow: hidden;
+            }
+            &--title {
+                font-size: 17px;
+                color: $primary;
+            }
+            &--description {
+                font-size: 15px;
+                font-family: 'Poppins', sans-serif;
+                color: $text100;
+            }
+            &--link {
+                color: $text100;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .blog {
+        &__list {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+    }
+}
+
+@media (max-width: 662px) {
+    .blog {
+        &__list {
+            &--item {
+                &--imgWrapper {
+                    height: 250px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 368px) {
+    .blog {
+        &__list {
+            &--item {
+                &--imgWrapper {
+                    height: 120px;
+                }
+            }
+        }
+    }
+}

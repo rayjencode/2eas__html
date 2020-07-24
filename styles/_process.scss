@@ -1,0 +1,26 @@
+.process {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+        &--item {
+            text-align: center;
+            &--title {
+                color: $primary;
+                font-family: 'Poppins', sans-serif;
+                font-size: 17px;
+            }
+            &--description {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .process {
+        &__list {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+    }
+}
